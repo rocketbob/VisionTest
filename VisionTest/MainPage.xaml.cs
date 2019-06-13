@@ -94,6 +94,7 @@ namespace VisionTest
             VisualFeatureTypes.Tags
         };
 
+        // ocr
         async void RecognizeText(object sender, System.EventArgs e)
         {
             try
