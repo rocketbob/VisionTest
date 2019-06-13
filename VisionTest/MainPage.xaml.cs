@@ -19,9 +19,6 @@ namespace VisionTest
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
-        public const string COMPUTER_VISION_KEY = "8cf2f17de42b4f57a87ecc1ca8a0404a"; 
-        public const string COMPUTER_VISION_ROOT = "https://eastus.api.cognitive.microsoft.com/";
-
         public MainPage()
         {
             InitializeComponent();
@@ -57,10 +54,10 @@ namespace VisionTest
                 });
 
                 var client = new ComputerVisionClient(
-                        new ApiKeyServiceClientCredentials(COMPUTER_VISION_KEY),
+                        new ApiKeyServiceClientCredentials(Constants.COMPUTER_VISION_KEY),
                         new System.Net.Http.DelegatingHandler[] { })
                 {
-                    Endpoint = COMPUTER_VISION_ROOT
+                    Endpoint = Constants.COMPUTER_VISION_ROOT
                 };
 
                 var description = String.Empty;
@@ -125,10 +122,10 @@ namespace VisionTest
                 });
 
                 var client = new ComputerVisionClient(
-                        new ApiKeyServiceClientCredentials(COMPUTER_VISION_KEY),
+                        new ApiKeyServiceClientCredentials(Constants.COMPUTER_VISION_KEY),
                         new System.Net.Http.DelegatingHandler[] { })
                 {
-                    Endpoint = COMPUTER_VISION_ROOT
+                    Endpoint = Constants.COMPUTER_VISION_ROOT
                 };
 
                 var description = String.Empty;
